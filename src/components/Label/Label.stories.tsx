@@ -1,6 +1,7 @@
 // Label.stories.tsx
 import Label from './Label';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+
 
 const meta: Meta<typeof Label> = {
   title: 'Components/Label',
