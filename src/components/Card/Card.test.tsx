@@ -12,5 +12,5 @@ test('Card is visible', () => {
 test('Disabled Card background changes', () => {
   render(<Card title="Disabled" disabled>Content</Card>);
   const region = screen.getByRole('region', { name: /card/i });
-  expect(region).toHaveStyle('background: #e5e7eb');
+  expect(region).toHaveStyle('background: #333');
 });

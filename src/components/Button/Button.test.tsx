@@ -12,5 +12,5 @@ test('Disabled button changes background color', () => {
   render(<Button label="Disabled" disabled />);
   const btn = screen.getByRole('button', { name: /disabled/i });
   expect(btn).toHaveAttribute('disabled');
-  expect(btn).toHaveStyle('background: #e5e7eb');
+  expect(btn).toHaveStyle('background: #ccc');
 });

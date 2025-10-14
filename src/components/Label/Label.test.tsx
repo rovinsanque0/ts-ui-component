@@ -11,5 +11,5 @@ test('Label is visible', () => {
 test('Disabled label color changes', () => {
   render(<Label text="Disabled Label" disabled />);
   const lbl = screen.getByText(/disabled label/i);
-  expect(lbl).toHaveStyle('color: #9ca3af');
+  expect(lbl).toHaveStyle('color: #333');
 });

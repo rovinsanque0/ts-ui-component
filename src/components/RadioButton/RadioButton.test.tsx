@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import RadioButton from './RadioButton';
 
 test('Radio button is visible', () => {
-  render(<RadioButton label="Pick me" name="x" value="y" />);
+  render(<RadioButton label="Pick me" name="x" value="y" onChange={() => {}} />);
   expect(screen.getByLabelText(/pick me/i)).toBeVisible();
 });
 
