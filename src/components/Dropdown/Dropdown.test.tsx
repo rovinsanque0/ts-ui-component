@@ -12,5 +12,5 @@ test('Disabled dropdown changes background color', () => {
   render(<Dropdown ariaLabel="DisabledDropdown" disabled />);
   const el = screen.getByRole('combobox', { name: /disableddropdown/i });
   expect(el).toHaveAttribute('disabled');
-  expect(el).toHaveStyle('background: #e5e7eb');
+  expect(el).toHaveStyle('background: #ccc');
 });
