@@ -19,6 +19,7 @@ const StyledCard = styled.div`
   &[aria-disabled='true'] {
     opacity: 0.6;
     pointer-events: none;
+    background-color: #333;
   }
 
   @media (max-width: 600px) {

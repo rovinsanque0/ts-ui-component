@@ -25,6 +25,7 @@ const StyledSelect = styled.select`
   &[disabled] {
     opacity: 0.6;
     cursor: not-allowed;
+    background-color: #ccc;
   }
 
   @media (max-width: 600px) {
