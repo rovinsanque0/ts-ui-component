@@ -1,6 +1,6 @@
 # Use a lightweight Node.js 18 LTS image as the base
 # This version is stable and works well for React + TypeScript projects
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Set the working directory inside the container
 # All files and commands will run from here

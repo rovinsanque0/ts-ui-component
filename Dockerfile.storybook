@@ -1,0 +1,14 @@
+FROM node:20-alpine
+
+WORKDIR /sanque_rovin_ui_garden
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Ensure Storybook port is available
+EXPOSE 8083
+
+# Run Storybook on 8083
+CMD ["npm", "run", "storybook", "--", "-p", "8083"]

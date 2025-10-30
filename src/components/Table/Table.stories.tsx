@@ -42,3 +42,34 @@ export const Default: StoryObj<typeof Table> = {
     </Table>
   ),
 };
+
+export const Disabled: StoryObj<typeof Table> = {
+  render: () => (
+    <Table disabled> 
+     <TableHeader>
+        <TableRow disabled>
+          <TableCell header>ID</TableCell>
+          <TableCell header>Name</TableCell>
+          <TableCell header>Role</TableCell>
+        </TableRow>
+      </TableHeader>
+      <tbody>
+        <TableRow disabled>
+          <TableCell>1</TableCell>
+          <TableCell>Rovin Sanque</TableCell>
+          <TableCell>Developer</TableCell>
+        </TableRow>
+        <TableRow disabled>
+          <TableCell>2</TableCell>
+          <TableCell>Bea</TableCell>
+          <TableCell>Designer</TableCell>
+        </TableRow>
+      </tbody>
+      <TableFooter>
+        <TableRow disabled>
+          <TableCell colSpan={3}>End of Table</TableCell>
+        </TableRow >
+      </TableFooter>
+    </Table>
+  ),
+};

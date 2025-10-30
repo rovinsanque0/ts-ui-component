@@ -12,6 +12,7 @@ export interface TableHeaderProps {
 
 export interface TableRowProps {
   children?: ReactNode;
+  disabled?: boolean;
 }
 
 export interface TableCellProps {

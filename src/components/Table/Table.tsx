@@ -23,3 +23,6 @@ const Table: React.FC<TableProps> = ({ children, disabled = false }) => {
 };
 
 export default Table;
+
+
+
