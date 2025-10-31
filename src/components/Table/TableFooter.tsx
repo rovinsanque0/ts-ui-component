@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableFooterProps } from './Table.types';
+import React from "react";
+import styled from "styled-components";
+import { TableFooterProps } from "./Table.types";
 
 const StyledFooter = styled.tfoot`
   background-color: #fafafa;

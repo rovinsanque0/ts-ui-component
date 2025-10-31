@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { HeroImageProps } from './HeroImage.types';
+import React from "react";
+import styled from "styled-components";
+import { HeroImageProps } from "./HeroImage.types";
 
 const HeroSection = styled.section`
   position: relative;
@@ -9,7 +9,7 @@ const HeroSection = styled.section`
   text-align: center;
   color: white;
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.6;
   }
 `;
@@ -50,9 +50,9 @@ const HeroText = styled.div`
 `;
 
 const HeroImage: React.FC<HeroImageProps> = ({
-  imageUrl = 'https://picsum.photos/1200/500',
-  title = 'Hero Title',
-  subtitle = 'Hero subtitle goes here.',
+  imageUrl = "https://picsum.photos/1200/500",
+  title = "Hero Title",
+  subtitle = "Hero subtitle goes here.",
   disabled = false,
 }) => {
   return (

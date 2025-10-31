@@ -1,16 +1,16 @@
 // Button.test.tsx
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Button from './Button';
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Button from "./Button";
 
-test('Button is visible', () => {
+test("Button is visible", () => {
   render(<Button label="Test Button" />);
-  expect(screen.getByRole('button', { name: /test button/i })).toBeVisible();
+  expect(screen.getByRole("button", { name: /test button/i })).toBeVisible();
 });
 
-test('Disabled button changes background color', () => {
+test("Disabled button changes background color", () => {
   render(<Button label="Disabled" disabled />);
-  const btn = screen.getByRole('button', { name: /disabled/i });
-  expect(btn).toHaveAttribute('disabled');
-  expect(btn).toHaveStyle('background: #ccc');
+  const btn = screen.getByRole("button", { name: /disabled/i });
+  expect(btn).toHaveAttribute("disabled");
+  expect(btn).toHaveStyle("background: #ccc");
 });

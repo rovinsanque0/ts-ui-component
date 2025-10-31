@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableRowProps } from './Table.types';
+import React from "react";
+import styled from "styled-components";
+import { TableRowProps } from "./Table.types";
 
 const StyledRow = styled.tr<{ disabled?: boolean }>`
   transition: background-color 0.2s ease;
@@ -10,8 +10,8 @@ const StyledRow = styled.tr<{ disabled?: boolean }>`
   }
 
   &:hover {
-    background-color: ${({ disabled }) => (disabled ? 'inherit' : '#f1f1f1')};
-    cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+    background-color: ${({ disabled }) => (disabled ? "inherit" : "#f1f1f1")};
+    cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
   }
 
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ButtonProps } from './Button.types';
+import React from "react";
+import styled from "styled-components";
+import { ButtonProps } from "./Button.types";
 
 const StyledButton = styled.button`
   background-color: #007bff;
@@ -11,7 +11,9 @@ const StyledButton = styled.button`
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 
   &:hover {
     background-color: #0056b3;
@@ -34,7 +36,7 @@ const StyledButton = styled.button`
 `;
 
 const Button: React.FC<ButtonProps> = ({
-  label = 'Click Me',
+  label = "Click Me",
   disabled = false,
   onClick,
 }) => {

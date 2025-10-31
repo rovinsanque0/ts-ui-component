@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableCellProps } from './Table.types';
+import React from "react";
+import styled from "styled-components";
+import { TableCellProps } from "./Table.types";
 
 const StyledTH = styled.th`
   text-align: left;
@@ -14,7 +14,11 @@ const StyledTD = styled.td`
   border-bottom: 1px solid #ddd;
 `;
 
-const TableCell: React.FC<TableCellProps> = ({ children, header = false, colSpan }) => {
+const TableCell: React.FC<TableCellProps> = ({
+  children,
+  header = false,
+  colSpan,
+}) => {
   const CellTag = header ? StyledTH : StyledTD;
   return <CellTag colSpan={colSpan}>{children}</CellTag>;
 };

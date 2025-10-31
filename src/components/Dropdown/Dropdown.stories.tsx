@@ -1,9 +1,9 @@
 // Dropdown.stories.tsx
-import Dropdown from './Dropdown';
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import Dropdown from "./Dropdown";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 const meta: Meta<typeof Dropdown> = {
-  title: 'Components/Dropdown',
+  title: "Components/Dropdown",
   component: Dropdown,
 };
 export default meta;

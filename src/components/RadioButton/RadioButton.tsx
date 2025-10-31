@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { RadioButtonProps } from './RadioButton.types';
+import React from "react";
+import styled from "styled-components";
+import { RadioButtonProps } from "./RadioButton.types";
 
 const RadioLabel = styled.label`
   display: flex;
@@ -15,7 +15,7 @@ const RadioLabel = styled.label`
     gap: 0.4rem;
   }
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -37,9 +37,9 @@ const RadioText = styled.span`
 `;
 
 const RadioButton: React.FC<RadioButtonProps> = ({
-  label = 'Option',
-  name = 'radio',
-  value = 'value',
+  label = "Option",
+  name = "radio",
+  value = "value",
   checked = false,
   onChange,
   disabled = false,
@@ -47,7 +47,11 @@ const RadioButton: React.FC<RadioButtonProps> = ({
   const id = `${name}-${value}`;
 
   return (
-    <RadioLabel htmlFor={id} data-testid="radio-container" aria-disabled={disabled}>
+    <RadioLabel
+      htmlFor={id}
+      data-testid="radio-container"
+      aria-disabled={disabled}
+    >
       <RadioInput
         id={id}
         type="radio"

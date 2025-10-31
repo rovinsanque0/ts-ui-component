@@ -1,0 +1,40 @@
+# Name of this GitHub Actions workflow
+name: CI
+
+# When this workflow should run
+on:
+  push: # Run whenever code is pushed to GitHub
+  pull_request: # Run whenever a Pull Request is opened or updated
+
+jobs:
+  build: # Name of the job (can be anything)
+    runs-on: ubuntu-latest # GitHub will spin up a fresh Ubuntu VM to run the job
+
+    steps:
+      # Step 1: Pull the code from the GitHub repository into the runner
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js so we can run npm + JS tooling
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Version of Node.js to install
+
+      # Step 3: Install project dependencies from package.json
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run ESLint to check code quality + errors
+      - name: Run ESLint
+        run: npm run lint
+
+      # Step 5: Run Prettier in "check" mode to ensure code is formatted properly
+      # --check = verifies formatting, but does NOT modify files
+      - name: Run Prettier
+        run: npm run format -- --check
+
+      # Step 6: Run Jest tests to validate the component behavior
+      # --watchAll=false = run once, not in watch mode
+      - name: Run tests
+        run: npm test -- --watchAll=false

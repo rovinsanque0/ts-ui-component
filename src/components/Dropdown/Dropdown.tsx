@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { DropdownProps } from './Dropdown.types';
+import React from "react";
+import styled from "styled-components";
+import { DropdownProps } from "./Dropdown.types";
 
 const StyledSelect = styled.select`
   padding: 0.6rem 1rem;
@@ -10,7 +10,9 @@ const StyledSelect = styled.select`
   background-color: #fff;
   color: #333;
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     border-color: #007bff;
@@ -35,11 +37,11 @@ const StyledSelect = styled.select`
 `;
 
 const Dropdown: React.FC<DropdownProps> = ({
-  ariaLabel = 'dropdown',
+  ariaLabel = "dropdown",
   options = [
-    { value: 'one', label: 'Option One' },
-    { value: 'two', label: 'Option Two' },
-    { value: 'three', label: 'Option Three' },
+    { value: "one", label: "Option One" },
+    { value: "two", label: "Option Two" },
+    { value: "three", label: "Option Three" },
   ],
   value,
   onChange,

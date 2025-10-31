@@ -1,9 +1,9 @@
 // RadioButton.stories.tsx
-import RadioButton from './RadioButton';
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import RadioButton from "./RadioButton";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 const meta: Meta<typeof RadioButton> = {
-  title: 'Components/RadioButton',
+  title: "Components/RadioButton",
   component: RadioButton,
 };
 export default meta;

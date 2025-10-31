@@ -1,2 +1,2 @@
 // index.ts
-export { default } from './Label';
+export { default } from "./Label";

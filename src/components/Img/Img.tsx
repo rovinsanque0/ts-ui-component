@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ImgProps } from './Img.types';
+import React from "react";
+import styled from "styled-components";
+import { ImgProps } from "./Img.types";
 
 const Figure = styled.figure`
   margin: 0;
@@ -11,7 +11,7 @@ const Figure = styled.figure`
   border-radius: 0.75rem;
   background-color: #f4f4f4;
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.6;
   }
 `;
@@ -27,8 +27,8 @@ const StyledImg = styled.img`
 `;
 
 const Img: React.FC<ImgProps> = ({
-  src = 'https://picsum.photos/600/300',
-  alt = 'Image',
+  src = "https://picsum.photos/600/300",
+  alt = "Image",
   disabled = false,
   width,
   height,

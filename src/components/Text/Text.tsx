@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TextProps } from './Text.types';
+import React from "react";
+import styled from "styled-components";
+import { TextProps } from "./Text.types";
 
 const StyledInput = styled.input`
   padding: 0.5rem;
@@ -14,28 +14,26 @@ const StyledInput = styled.input`
   }
 `;
 
-
-
 const Text: React.FC<TextProps> = ({
-    label = 'Text Input',
-    disabled = false,
-    value = '',
-    placeholder = 'Enter a text',
-    name = 'text-input',
-    type = 'text',
-    onChange,
+  label = "Text Input",
+  disabled = false,
+  value = "",
+  placeholder = "Enter a text",
+  name = "text-input",
+  type = "text",
+  onChange,
 }) => {
   return (
     <label>
-        {label && <span>{label}</span>}
-        <StyledInput
-            disabled={disabled}
-            defaultValue={value}
-            placeholder={placeholder}   
-            name={name}
-            type={type}
-            onChange={(e) => onChange?.(e.target.value)}
-            />
+      {label && <span>{label}</span>}
+      <StyledInput
+        disabled={disabled}
+        defaultValue={value}
+        placeholder={placeholder}
+        name={name}
+        type={type}
+        onChange={(e) => onChange?.(e.target.value)}
+      />
     </label>
   );
 };

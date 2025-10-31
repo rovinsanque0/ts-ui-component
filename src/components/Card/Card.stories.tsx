@@ -1,18 +1,18 @@
 // Card.stories.tsx
-import Card from './Card';
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import Card from "./Card";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 const meta: Meta<typeof Card> = {
-  title: 'Components/Card',
+  title: "Components/Card",
   component: Card,
   argTypes: {
-    title: { control: 'text' },
-    children: { control: 'text' },
-    disabled: { control: 'boolean' },
+    title: { control: "text" },
+    children: { control: "text" },
+    disabled: { control: "boolean" },
   },
   args: {
-    title: 'Product',
-    children: 'This is a reusable card component.',
+    title: "Product",
+    children: "This is a reusable card component.",
     disabled: false,
   },
 };

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableProps } from './Table.types';
+import React from "react";
+import styled from "styled-components";
+import { TableProps } from "./Table.types";
 
 const StyledTable = styled.table`
   width: 100%;
@@ -13,16 +13,17 @@ const StyledTable = styled.table`
     font-size: 0.9rem;
   }
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.6;
   }
 `;
 
 const Table: React.FC<TableProps> = ({ children, disabled = false }) => {
-  return <StyledTable data-testid="table" aria-disabled={disabled}>{children}</StyledTable>;
+  return (
+    <StyledTable data-testid="table" aria-disabled={disabled}>
+      {children}
+    </StyledTable>
+  );
 };
 
 export default Table;
-
-
-

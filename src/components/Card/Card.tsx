@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { CardProps } from './Card.types';
+import React from "react";
+import styled from "styled-components";
+import { CardProps } from "./Card.types";
 
 const StyledCard = styled.div`
   background-color: #fff;
@@ -9,14 +9,16 @@ const StyledCard = styled.div`
   padding: 1.5rem;
   max-width: 400px;
   margin: 1rem auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.6;
     pointer-events: none;
     background-color: #333;
@@ -49,8 +51,8 @@ const CardBody = styled.div`
 `;
 
 const Card: React.FC<CardProps> = ({
-  title = 'Card Title',
-  children = 'Card content',
+  title = "Card Title",
+  children = "Card content",
   disabled = false,
 }) => {
   return (

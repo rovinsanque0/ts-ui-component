@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { LabelProps } from './Label.types';
+import React from "react";
+import styled from "styled-components";
+import { LabelProps } from "./Label.types";
 
 const StyledLabel = styled.label`
   display: inline-block;
@@ -9,7 +9,7 @@ const StyledLabel = styled.label`
   color: #333;
   margin-bottom: 0.4rem;
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -20,7 +20,7 @@ const StyledLabel = styled.label`
 `;
 
 const Label: React.FC<LabelProps> = ({
-  text = 'Label',
+  text = "Label",
   htmlFor,
   disabled = false,
 }) => {
