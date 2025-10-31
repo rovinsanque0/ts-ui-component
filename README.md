@@ -40,3 +40,9 @@ Port: 8018
    docker rm sanque_rovin_storybook_container
 
    Working directory: /sanque_rovin_ui_garden_build_checks
+
+
+
+## Running a commit
+   git add .
+   git commit -m "your message"
