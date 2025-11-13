@@ -1,4 +1,4 @@
-# Assignment 13 - UC Component Library 
+# Assignment 13 - UC Component Library
 
 This project showcases automated code-quality enforcement using Husky pre-commit hooks and GitHub Actions CI. While also running on port 8018.
 

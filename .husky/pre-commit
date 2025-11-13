@@ -1,12 +1,4 @@
-#!/usr/bin/env sh
 
-# This tells the system to run the script using the default shell environment (sh).
-# It makes the hook work on macOS, Linux, and Windows environments.
-
-. "$(dirname -- "$0")/_/husky.sh"
-# This loads Husky's internal script.
-# It prepares the hook environment so Husky can run properly.
-# Without this line, some Husky features won't work correctly.
 
 
 #  PRE-COMMIT CHECKS
@@ -16,7 +8,7 @@
 npm run lint
 
 # Run Prettier to format code
-npm run format
+npm run prettier
 
 # Run tests and prevent watch mode from hanging the commit
 npm test -- --watchAll=false

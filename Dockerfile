@@ -32,3 +32,20 @@ EXPOSE 8018
 # -s = serve static files
 # -l 8018 = listen on port 8018
 CMD ["serve", "-s", "build", "-l", "8018"]
+
+
+
+
+# Alternative Dockerfile for running linting, formatting, and tests
+
+# FROM node:20-alpine
+
+# WORKDIR /sanque_rovin_ui_garden_build_checks
+
+# COPY package*.json ./
+# RUN npm install
+
+# COPY . .
+
+# CMD ["npm", "run", lint && npm run format && npm test]
+
