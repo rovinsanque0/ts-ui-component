@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { TableFooterProps } from "./Table.types";
 
-const StyledFooter = styled.tfoot`
-  background-color: #f5f5f5;
-`;
+const Footer = styled.tfoot``;
 
-const TableFooter: React.FC<TableFooterProps> = ({ children }) => {
-  return <StyledFooter role="rowgroup">{children}</StyledFooter>;
+const TableFooter: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
+  return <Footer>{children}</Footer>;
 };
 
-TableFooter.displayName = "TableFooter";
 export default TableFooter;

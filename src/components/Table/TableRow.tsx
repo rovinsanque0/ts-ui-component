@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { TableRowProps } from "./Table.types";
 
-const Row = styled.tr`
-  border-bottom: 1px solid #ccc;
+const Row = styled.tr<{ disabled?: boolean }>`
+  opacity: ${(p) => (p.disabled ? 0.6 : 1)};
 `;
 
-const TableRow: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-  return <Row>{children}</Row>;
+const TableRow: React.FC<TableRowProps> = ({ children, disabled }) => {
+  return <Row disabled={disabled}>{children}</Row>;
 };
 
 export default TableRow;

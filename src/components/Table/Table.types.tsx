@@ -1,5 +1,5 @@
 export interface TableProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   disabled?: boolean;
 }
 
@@ -10,12 +10,14 @@ export interface TableRowProps {
 
 export interface TableCellProps {
   children: React.ReactNode;
+  header?: boolean;  
+  colSpan?: number;  
 }
 
 export interface TableHeaderProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export interface TableFooterProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
