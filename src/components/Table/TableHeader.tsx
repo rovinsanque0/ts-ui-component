@@ -21,7 +21,6 @@ const StyledHeader = styled.thead`
 
 const TableHeader: React.FC<TableHeaderProps> = ({ children }) => {
   return <StyledHeader>{children}</StyledHeader>;
-  
 };
 TableHeader.displayName = "TableHeader";
 export default TableHeader;

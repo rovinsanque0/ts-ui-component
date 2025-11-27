@@ -61,7 +61,6 @@ const Card: React.FC<CardProps> = ({
       <CardBody>{children}</CardBody>
     </StyledCard>
   );
-
 };
 
 export default Card;

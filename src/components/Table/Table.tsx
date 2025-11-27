@@ -24,18 +24,18 @@ const Table: React.FC<TableProps> = ({ children, disabled = false }) => {
 
   // Extract parts
   const header = childArray.find(
-    (child: any) => child.type?.displayName === "TableHeader"
+    (child: any) => child.type?.displayName === "TableHeader",
   );
 
   const footer = childArray.find(
-    (child: any) => child.type?.displayName === "TableFooter"
+    (child: any) => child.type?.displayName === "TableFooter",
   );
 
   // Everything else goes into <tbody>
   const bodyChildren = childArray.filter(
     (child: any) =>
       child.type?.displayName !== "TableHeader" &&
-      child.type?.displayName !== "TableFooter"
+      child.type?.displayName !== "TableFooter",
   );
 
   return (
