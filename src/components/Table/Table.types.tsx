@@ -1,9 +1,7 @@
-
 export interface TableProps {
-  children?: React.ReactNode;   
+  children?: React.ReactNode;
   disabled?: boolean;
 }
-
 
 export interface TableRowProps {
   children: React.ReactNode;
