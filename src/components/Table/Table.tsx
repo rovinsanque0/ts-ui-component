@@ -11,12 +11,8 @@ const StyledTable = styled.table<{ disabled?: boolean }>`
 
 const Table: React.FC<TableProps> = ({ children, disabled = false }) => {
   return (
-    <StyledTable
-      data-testid="table"
-      disabled={disabled}
-      aria-label="table"   
-    >
-      <tbody>{children}</tbody>  
+    <StyledTable data-testid="table" disabled={disabled} aria-label="table">
+      <tbody>{children}</tbody>
     </StyledTable>
   );
 };

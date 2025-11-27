@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { CardProps } from "./Card.types";
 
-const StyledCard = styled.div`
-  background-color: #fff;
+const StyledCard = styled.div<{ disabled?: boolean }>`
+  background-color: ${({ disabled }) => (disabled ? "#333" : "#fff")};
   border-radius: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -12,16 +12,13 @@ const StyledCard = styled.div`
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
+  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  &[aria-disabled="true"] {
-    opacity: 0.6;
-    pointer-events: none;
-    background-color: #333;
+    transform: ${({ disabled }) => (disabled ? "none" : "translateY(-3px)")};
+    box-shadow: ${({ disabled }) =>
+      disabled ? "0 2px 6px rgba(0,0,0,0.1)" : "0 4px 10px rgba(0,0,0,0.15)"};
   }
 
   @media (max-width: 600px) {
@@ -56,7 +53,11 @@ const Card: React.FC<CardProps> = ({
   disabled = false,
 }) => {
   return (
-    <StyledCard role="group" aria-label="card" aria-disabled={disabled}>
+    <StyledCard
+      disabled={disabled}
+      role="group"
+      aria-label="card"
+    >
       {title && <CardTitle>{title}</CardTitle>}
       <CardBody>{children}</CardBody>
     </StyledCard>

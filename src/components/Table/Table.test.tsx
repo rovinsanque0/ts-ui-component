@@ -9,7 +9,7 @@ test("Table renders without crashing", () => {
       <TableRow>
         <TableCell>Test</TableCell>
       </TableRow>
-    </Table>
+    </Table>,
   );
 
   expect(screen.getByTestId("table")).toBeInTheDocument();
