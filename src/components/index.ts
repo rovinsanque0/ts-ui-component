@@ -5,5 +5,5 @@ export * from "./HeroImage";
 export * from "./Img";
 export * from "./Label";
 export * from "./RadioButton";
-export * from "./Table";  
+export * from "./Table";
 export * from "./Text";

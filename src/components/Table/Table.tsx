@@ -19,9 +19,30 @@ const StyledTable = styled.table`
 `;
 
 const Table: React.FC<TableProps> = ({ children, disabled = false }) => {
+  // Convert children to array for safe processing
+  const childArray = React.Children.toArray(children);
+
+  // Extract parts
+  const header = childArray.find(
+    (child: any) => child.type?.displayName === "TableHeader"
+  );
+
+  const footer = childArray.find(
+    (child: any) => child.type?.displayName === "TableFooter"
+  );
+
+  // Everything else goes into <tbody>
+  const bodyChildren = childArray.filter(
+    (child: any) =>
+      child.type?.displayName !== "TableHeader" &&
+      child.type?.displayName !== "TableFooter"
+  );
+
   return (
-    <StyledTable data-testid="table" aria-disabled={disabled}>
-      {children}
+    <StyledTable data-testid="table" aria-disabled={disabled} role="table">
+      {header}
+      <tbody>{bodyChildren}</tbody>
+      {footer}
     </StyledTable>
   );
 };

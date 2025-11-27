@@ -27,5 +27,5 @@ const StyledRow = styled.tr<{ disabled?: boolean }>`
 const TableRow: React.FC<TableRowProps> = ({ children, disabled = false }) => {
   return <StyledRow disabled={disabled}>{children}</StyledRow>;
 };
-
+TableRow.displayName = "TableRow";
 export default TableRow;

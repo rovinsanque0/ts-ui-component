@@ -15,9 +15,7 @@ const Text: React.FC<TextProps> = ({
   };
 
   return (
-    <p style={{ fontSize: fontSizes[size], color, ...style }}>
-      {children}
-    </p>
+    <p style={{ fontSize: fontSizes[size], color, ...style }}>{children}</p>
   );
 };
 

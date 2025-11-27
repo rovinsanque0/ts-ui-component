@@ -54,7 +54,7 @@ const HeroImage: React.FC<HeroImageProps> = ({
   title,
   subtitle,
   disabled = false,
-  children,                  // <--
+  children, // <--
 }) => {
   return (
     <HeroSection data-testid="hero" aria-disabled={disabled}>
@@ -74,6 +74,5 @@ const HeroImage: React.FC<HeroImageProps> = ({
     </HeroSection>
   );
 };
-
 
 export default HeroImage;

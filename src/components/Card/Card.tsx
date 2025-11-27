@@ -56,11 +56,12 @@ const Card: React.FC<CardProps> = ({
   disabled = false,
 }) => {
   return (
-    <StyledCard role="region" aria-label="card" aria-disabled={disabled}>
+    <StyledCard role="group" aria-label="card" aria-disabled={disabled}>
       {title && <CardTitle>{title}</CardTitle>}
       <CardBody>{children}</CardBody>
     </StyledCard>
   );
+
 };
 
 export default Card;

@@ -4,7 +4,5 @@ export interface ImgProps {
   disabled?: boolean;
   width?: string | number;
   height?: string | number;
-  style?: React.CSSProperties; 
-
-
+  style?: React.CSSProperties;
 }

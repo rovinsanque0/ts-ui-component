@@ -20,5 +20,5 @@ const StyledFooter = styled.tfoot`
 const TableFooter: React.FC<TableFooterProps> = ({ children }) => {
   return <StyledFooter>{children}</StyledFooter>;
 };
-
+TableFooter.displayName = "TableFooter";
 export default TableFooter;

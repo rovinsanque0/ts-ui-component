@@ -22,5 +22,5 @@ const TableCell: React.FC<TableCellProps> = ({
   const CellTag = header ? StyledTH : StyledTD;
   return <CellTag colSpan={colSpan}>{children}</CellTag>;
 };
-
+TableCell.displayName = "TableCell";
 export default TableCell;
