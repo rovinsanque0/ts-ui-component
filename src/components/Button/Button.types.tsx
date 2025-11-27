@@ -1,6 +1,5 @@
-// Button.types.tsx
 export interface ButtonProps {
-  label?: string;
+  children?: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;
 }

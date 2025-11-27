@@ -36,13 +36,13 @@ const StyledButton = styled.button`
 `;
 
 const Button: React.FC<ButtonProps> = ({
-  label = "Click Me",
+  children,
   disabled = false,
   onClick,
 }) => {
   return (
     <StyledButton disabled={disabled} onClick={onClick}>
-      {label}
+      {children}
     </StyledButton>
   );
 };

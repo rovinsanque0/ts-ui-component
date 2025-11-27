@@ -1,7 +1,8 @@
 // HeroImage.types.tsx
 export interface HeroImageProps {
-  imageUrl?: string;
+  image?: string;
   title?: string;
   subtitle?: string;
   disabled?: boolean;
+  children?: React.ReactNode;
 }

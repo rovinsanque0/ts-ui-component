@@ -8,9 +8,23 @@ const meta: Meta<typeof Text> = {
 export default meta;
 
 export const Default: StoryObj<typeof Text> = {
-  args: { label: "Text Input", placeholder: "Enter a text" },
+  args: {
+    size: "md",
+    children: "This is default text",
+  },
 };
 
-export const Disabled: StoryObj<typeof Text> = {
-  args: { label: "Text Input", disabled: true, value: "Disabled Text" },
+export const Large: StoryObj<typeof Text> = {
+  args: {
+    size: "lg",
+    children: "This is large text",
+  },
+};
+
+export const CustomColor: StoryObj<typeof Text> = {
+  args: {
+    size: "md",
+    color: "red",
+    children: "This is red text",
+  },
 };

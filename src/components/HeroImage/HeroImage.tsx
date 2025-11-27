@@ -50,20 +50,30 @@ const HeroText = styled.div`
 `;
 
 const HeroImage: React.FC<HeroImageProps> = ({
-  imageUrl = "https://picsum.photos/1200/500",
-  title = "Hero Title",
-  subtitle = "Hero subtitle goes here.",
+  image = "https://picsum.photos/1200/500",
+  title,
+  subtitle,
   disabled = false,
+  children,                  // <--
 }) => {
   return (
     <HeroSection data-testid="hero" aria-disabled={disabled}>
-      <HeroImg src={imageUrl} alt={title} />
+      <HeroImg src={image} alt={title ?? "Hero image"} />
+
+      {/* If children exist → render children instead of default title/subtitle */}
       <HeroText>
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
+        {children ? (
+          children
+        ) : (
+          <>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+          </>
+        )}
       </HeroText>
     </HeroSection>
   );
 };
+
 
 export default HeroImage;

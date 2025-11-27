@@ -20,13 +20,13 @@ const StyledLabel = styled.label`
 `;
 
 const Label: React.FC<LabelProps> = ({
-  text = "Label",
+  children,
   htmlFor,
   disabled = false,
 }) => {
   return (
     <StyledLabel htmlFor={htmlFor} aria-disabled={disabled}>
-      {text}
+      {children}
     </StyledLabel>
   );
 };

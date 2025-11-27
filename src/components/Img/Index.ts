@@ -1,2 +1,2 @@
 // index.ts
-export { default } from "./Img";
+export { default as Img} from "./Img";

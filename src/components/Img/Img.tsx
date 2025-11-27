@@ -32,10 +32,20 @@ const Img: React.FC<ImgProps> = ({
   disabled = false,
   width,
   height,
+  style,
 }) => {
   return (
-    <Figure data-testid="img-wrap" aria-disabled={disabled}>
-      <StyledImg src={src} alt={alt} width={width} height={height} />
+    <Figure
+      data-testid="img-wrap"
+      aria-disabled={disabled}
+
+    >
+      <StyledImg
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+      />
     </Figure>
   );
 };
