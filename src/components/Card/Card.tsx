@@ -53,11 +53,7 @@ const Card: React.FC<CardProps> = ({
   disabled = false,
 }) => {
   return (
-    <StyledCard
-      disabled={disabled}
-      role="group"
-      aria-label="card"
-    >
+    <StyledCard disabled={disabled} role="group" aria-label="card">
       {title && <CardTitle>{title}</CardTitle>}
       <CardBody>{children}</CardBody>
     </StyledCard>
