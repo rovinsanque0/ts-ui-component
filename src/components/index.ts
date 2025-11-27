@@ -7,5 +7,4 @@ export * from "./RadioButton";
 export * from "./Table";
 export * from "./Text";
 export { default as Img } from "./Img/Img";
-export * from "./Img/Img.types"; 
-
+export * from "./Img/Img.types";
