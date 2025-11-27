@@ -48,9 +48,6 @@ const GradientHero = styled.div`
   padding: 10px 10px;
 `;
 
-
-
-
 /* ----------- Home Page ----------- */
 
 const Home = () => {
@@ -127,7 +124,6 @@ const Home = () => {
       {/* --- PROJECTS / WORK --- */}
       <Section>
         <Label>Projects</Label>
-        
 
         <Grid>
           {/* ---- Snipply ---- */}
@@ -177,7 +173,7 @@ const Home = () => {
       <Section>
         <Label>Skills</Label>
 
-        <p style={{ fontSize: "1rem", color: "#333", paddingLeft: "3.5rem"}}>
+        <p style={{ fontSize: "1rem", color: "#333", paddingLeft: "3.5rem" }}>
           These are the technologies I’m confident with and currently expanding:
         </p>
 

@@ -8,7 +8,7 @@ const StyledLabel = styled.label`
   font-weight: 500;
   color: #333;
   margin-bottom: 0.4rem;
-  padding-left: 2.0rem;
+  padding-left: 2rem;
 
   &[aria-disabled="true"] {
     opacity: 0.6;

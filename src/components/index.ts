@@ -2,8 +2,10 @@ export * from "./Button";
 export * from "./Card";
 export * from "./Dropdown";
 export * from "./HeroImage";
-export * from "./Img";
 export * from "./Label";
 export * from "./RadioButton";
 export * from "./Table";
 export * from "./Text";
+export { default as Img } from "./Img/Img";
+export * from "./Img/Img.types"; 
+

@@ -11,9 +11,7 @@ const StyledTable = styled.table<{ disabled?: boolean }>`
 const Table: React.FC<TableProps> = ({ children, disabled }) => {
   return (
     <StyledTable disabled={disabled} data-testid="table">
-      {React.Children.map(children, (child) =>
-        child
-      )}
+      {React.Children.map(children, (child) => child)}
     </StyledTable>
   );
 };
