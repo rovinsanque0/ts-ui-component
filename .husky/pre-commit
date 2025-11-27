@@ -5,7 +5,7 @@
 npm run lint
 
 # Run Prettier to format code
-npm run prettier
+npm run format
 
 # Run tests and prevent watch mode from hanging the commit
 npm test -- --watchAll=false

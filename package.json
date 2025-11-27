@@ -25,7 +25,8 @@
     "storybook": "storybook dev -p 8018 --no-open",
     "build-storybook": "storybook build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prettier": "prettier --write .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepare": "husky"
   },
   "eslintConfig": {

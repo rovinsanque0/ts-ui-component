@@ -1,14 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { TableHeaderProps } from "./Table.types";
 
-const StyledHeader = styled.thead`
-  font-weight: bold;
-`;
+const Header = styled.thead``;
 
-const TableHeader: React.FC<TableHeaderProps> = ({ children }) => {
-  return <StyledHeader role="rowgroup">{children}</StyledHeader>;
+const TableHeader: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+  return <Header>{children}</Header>;
 };
 
-TableHeader.displayName = "TableHeader";
 export default TableHeader;

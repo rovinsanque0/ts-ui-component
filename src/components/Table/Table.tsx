@@ -2,20 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { TableProps } from "./Table.types";
 
-const StyledTable = styled.table<{ disabled?: boolean }>`
+const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
-  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
-  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
+
+  &[aria-disabled="true"] {
+    opacity: 0.6;
+  }
 `;
 
 const Table: React.FC<TableProps> = ({ children, disabled = false }) => {
   return (
-    <StyledTable data-testid="table" disabled={disabled} aria-label="table">
-      <tbody>{children}</tbody>
+    <StyledTable aria-disabled={disabled} data-testid="table">
+      {children}
     </StyledTable>
   );
 };
 
-Table.displayName = "Table";
 export default Table;
