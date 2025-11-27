@@ -17,5 +17,7 @@ test("Disabled Card background changes", () => {
   );
   const region = screen.getByRole("group", { name: /card/i });
 
-  expect(region).toHaveStyle("background: #333");
+  expect(region).toHaveStyle(
+    "background: linear-gradient(135deg, #555, #fae3e3ff)",
+  );
 });

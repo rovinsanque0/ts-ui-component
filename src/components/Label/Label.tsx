@@ -4,10 +4,11 @@ import { LabelProps } from "./Label.types";
 
 const StyledLabel = styled.label`
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #333;
   margin-bottom: 0.4rem;
+  padding-left: 2.0rem;
 
   &[aria-disabled="true"] {
     opacity: 0.6;

@@ -10,8 +10,8 @@ export interface TableRowProps {
 
 export interface TableCellProps {
   children: React.ReactNode;
-  header?: boolean;  
-  colSpan?: number;  
+  header?: boolean;
+  colSpan?: number;
 }
 
 export interface TableHeaderProps {

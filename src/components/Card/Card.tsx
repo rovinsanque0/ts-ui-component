@@ -4,10 +4,10 @@ import { CardProps } from "./Card.types";
 
 const StyledCard = styled.div<{ disabled?: boolean }>`
   background: ${({ disabled }) =>
-  disabled
-    ? "linear-gradient(135deg, #555, #fae3e3ff)"
-    : "linear-gradient(135deg, #fdfeffff, #a7bdf1ff)"};
-color: #e2e8f0;
+    disabled
+      ? "linear-gradient(135deg, #555, #fae3e3ff)"
+      : "linear-gradient(135deg, #fdfeffff, #a7bdf1ff)"};
+  color: #e2e8f0;
   border-radius: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
