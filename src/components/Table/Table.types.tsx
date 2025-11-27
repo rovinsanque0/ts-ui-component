@@ -1,26 +1,21 @@
-// Table.types.tsx
-import { ReactNode } from "react";
-
 export interface TableProps {
-  children?: ReactNode;
+  children: React.ReactNode;
   disabled?: boolean;
 }
 
-export interface TableHeaderProps {
-  children?: ReactNode;
-}
-
 export interface TableRowProps {
-  children?: ReactNode;
+  children: React.ReactNode;
   disabled?: boolean;
 }
 
 export interface TableCellProps {
-  children?: ReactNode;
-  header?: boolean;
-  colSpan?: number;
+  children: React.ReactNode;
+}
+
+export interface TableHeaderProps {
+  children: React.ReactNode;
 }
 
 export interface TableFooterProps {
-  children?: ReactNode;
+  children: React.ReactNode;
 }
